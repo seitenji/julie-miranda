@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Merriweather', sans-serif;
-    color: #0C0C0C;
+    color: #333333;
     line-height: 2rem;
 }
 
@@ -16,7 +16,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #0C0C0C;
+    color: #333333;
 }
 
 p {
@@ -256,9 +256,13 @@ img.business {
 }
 
 /* Contact */
+#section6 .wrapper {
+    background-color: #F4F4FF;
+}
+
 .contact {
     display: flex;
-    color: #ffffff;
+    color: #333333;
     width: 100%;
 }
 
@@ -278,10 +282,17 @@ img.business {
 
 .contact li {
     margin: 1rem auto;
+    display: flex;
+    height: auto;
+    align-items: center;
 }
 
-.contact ul a {
-    color: #ffffff;
+.contact ul li > a {
+    margin: 0 1rem;
+}
+
+.contact ul .sns-icon {
+    color: #9A719D;
 }
 
 .contact .fields {
@@ -291,8 +302,8 @@ img.business {
 .contact input {
     background: none;
     border: 0;
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff;
+    color: #333333;
+    border-bottom: 1px solid #333333;
     width: 75%;
     padding: .5rem;
     margin: 1.1rem auto;
@@ -302,8 +313,8 @@ img.business {
 .contact textarea {
     background: none;
     border: 0;
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff;
+    color: #333333;
+    border-bottom: 1px solid #333333;
     width: 75%;
     padding: .5rem;
     margin: 1.1rem auto;
@@ -312,23 +323,24 @@ img.business {
 }
 
 .contact ::placeholder { 
-    color: #ffffff;
+    color: #333333;
     opacity: 1; /* Firefox */
     font-size: 1.1rem;
 }
   
 .contact :-ms-input-placeholder {
-    color: #ffffff;
+    color: #333333;
     font-size: 1.1rem;
 }
   
 .contact ::-ms-input-placeholder { 
-    color: #ffffff;
+    color: #333333;
     font-size: 1.1rem;
 }
 
 .form-btn {
-    background-color: #ffffff;
+    background-color: #9A719D;
+    color: #ffffff;
     font-size: 1.2rem;
     padding: 1rem 2rem;
     cursor: pointer;
@@ -342,6 +354,17 @@ img.business {
     color: #ffffff;
 }
 
+
+/* Large laptop and below */
+@media(max-width: 1600px){
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}
 
 
 
