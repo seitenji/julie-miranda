@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -69,6 +71,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .navbar a {
@@ -91,6 +94,10 @@ img {
 /* Home */
 .home {
     display: flex;
+}
+
+.home > div {
+    padding: 0 2rem;
 }
 
 .home h1 {
@@ -120,12 +127,20 @@ img {
 
 .main-picture {
     max-width: 540px;
+    width: auto;
 }
 
 /* About */
 .about {
     display: flex;
     justify-content: space-around;
+}
+
+.about-img {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-text {
@@ -154,6 +169,7 @@ img {
 /* Events */
 .events {
     margin-bottom: 4rem;
+    padding: 0 5rem;
 }
 
 .events p {
@@ -174,6 +190,7 @@ img {
 /* Services */
 .services {
     color: #8A588E;
+    padding: 0 5rem;
 }
 
 .services h2 {
@@ -191,11 +208,10 @@ img {
 .card {
     background-color: #ffffff;
     text-align: center;
-    width: 365px;
-    height: 350px;
+    max-width: 365px;
     border-radius: 21px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 40px 20px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -253,6 +269,10 @@ img.business {
     font-size: 1.75rem;
     border-bottom: 1px solid #707070;
     padding: 25px;
+}
+
+.awards li:last-child {
+    border-bottom: 0;
 }
 
 /* Contact */
@@ -360,12 +380,82 @@ img.business {
     .about-text {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+        align-items: flex-start;
+        justify-content: start;
+    }
+
+    .about-text h1 {
+        margin: 2rem 0 1rem;
+    }
+
+    .events {
+        margin-bottom: 0;
+    }
+
+    .testimonials .grid {
+        margin: 0;
+        padding: 0 5rem;
+    }    
+
+    .contact {
+        justify-content: space-around;
+    }
+    
+    .contact > div {
+        width: auto;
     }
 }
 
+@media(max-width:1440px) {
+    .contact {
+        justify-content: space-evenly;
+    }
+
+    .contact input, 
+    .contact textarea {
+        width: 100%;
+    }
+}
+
+@media(max-width:1366px) {
+    .home h1,
+    .about h1 {
+        font-size: 5rem;
+    }
+
+    .about {
+        justify-content: space-evenly;
+    }
+
+    .about-img img {
+        max-width: 366px;
+    }
+    
+    .awards li {
+        font-size: 1.25rem;
+        padding: 15px;
+    }
+
+    .txt-xxl { font-size: 2rem!important; }
+}
+
+@media (max-width: 1280px){
+    .home h1, .about h1 {
+        font-size: 4rem;
+    }
+
+    .events-text p {
+        margin: 1rem 0 2rem;
+    }
+
+    .events p {
+        line-height: 1.2rem;
+    }
+
+    .txt-xl {
+        font-size: 1.75rem!important;
+    }
+}
 
 
 @keyframes animation {
