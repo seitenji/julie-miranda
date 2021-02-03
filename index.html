@@ -20,19 +20,23 @@
 </head>
 <body>
     <div id="header">
-        <div class="navbar">
-            <a data-menuanchor="1stPage" class="active txt-lg" href="#1stPage">Julie Prado-Miranda</a>
-            <ul class="nav-links txt-sm">
-                <li data-menuanchor="1stPage" class="active"><a href="#1stPage">Home</a></li>
-                <li data-menuanchor="2ndPage"><a href="#2ndPage">About</a></li>
-                <li data-menuanchor="3rdPage"><a href="#3rdPage">Events</a></li>
-                <li data-menuanchor="4thPage"><a href="#4thPage">Services</a></li>
-                <li data-menuanchor="5thPage"><a href="#5thPage">Testimonials</a></li>
-                <li data-menuanchor="6thPage"><a href="#6thPage">Awards</a></li>
-                <li data-menuanchor="7thPage"><a href="#7thPage" class="btn">Contact</a></li>
-            </ul>
-        </div>
+        <!-- <div class="bar" id="bar"> -->
+            <div class="navbar" id="navbar">
+                <a data-menuanchor="1stPage" class="active txt-lg" href="#1stPage">Julie Prado-Miranda</a>
+                <a class="toggle-button" id="toggle-button"><i class="fas fa-bars fa-2x"></i></a>
+                <ul class="nav-links txt-sm nav-ul" id="nav-ul">
+                    <li data-menuanchor="1stPage" class="active"><a class="nav-item" href="#1stPage">Home</a></li>
+                    <li data-menuanchor="2ndPage"><a class="nav-item" href="#2ndPage">About</a></li>
+                    <li data-menuanchor="3rdPage"><a class="nav-item" href="#3rdPage">Events</a></li>
+                    <li data-menuanchor="4thPage"><a class="nav-item" href="#4thPage">Services</a></li>
+                    <li data-menuanchor="5thPage"><a class="nav-item" href="#5thPage">Testimonials</a></li>
+                    <li data-menuanchor="6thPage"><a class="nav-item" href="#6thPage">Awards</a></li>
+                    <li data-menuanchor="7thPage"><a class="nav-item" href="#7thPage" class="btn">Contact</a></li>
+                </ul>
+            </div>
+        <!-- </div> -->
     </div>
+
     <div id="footer" class="footer text-center txt-sm">Copyright &copy; 2021</div>
 
     <div id="fullpage">
@@ -44,7 +48,7 @@
                         <h1>Paano Ba<br /> 
                             Mag-Ipon?</h1>
                         <p>
-                            PBMI is a community that will provide tips and suggestion on how much you can afford to save your money and find out  how  to set and reach your savings goal.                    
+                            PBMI is a community that will provide tips and suggestion on how much you can afford to save your money and find out  how  to set and reach your savings&nbsp;goal.                    
                         </p>
                         <img class="arrow" src="images/arrow.png" alt="" />
                     </div>
@@ -64,7 +68,7 @@
                         <p>
                             a Registered Financial Planner and certified Investment Solicitor.
                             She has a wealth of experience prior to joining the financial services industry.
-                            <b>Envisions to make the Filipinos rich for the glory of God.</b>
+                            <b>Envisions to make the Filipinos rich for the glory&nbsp;of&nbsp;God.</b> 
                         </p>
                     </div>
                 </div>
@@ -89,7 +93,7 @@
                             <img src="images/event1.png" alt="" />
                             <p class="txt-sm">Jan 23, 2021</p>
                             <h3 class="txt-md">5 Pillars of Wealth</h3>
-                            <p class="txt-sm">
+                            <p class="txt-sm event-info">
                                 We talk about the 5 Pillars of Wealth via ZOOM. Learn and breakthrough this year 2021!                                 
                             </p>
                         </div>
@@ -97,7 +101,7 @@
                             <img src="images/event2.png" alt="" />
                             <p class="txt-sm">Dec 10, 2020</p>
                             <h3 class="txt-md">Crisis Proofing Your Personal Finance</h3>
-                            <p class="txt-sm">
+                            <p class="txt-sm event-info">
                                 Learn from the great line-up of speakers, as well as topics for this webinar!                          
                             </p>
                         </div>
@@ -105,7 +109,7 @@
                             <img src="images/event3.png" alt="" />
                             <p class="txt-sm">Oct 08, 2020</p>
                             <h3 class="txt-md">Paano ba Mag-ipon ngayong Pandemya?</h3>
-                            <p class="txt-sm">
+                            <p class="txt-sm event-info">
                                 Topic on how we can still achieve financial freedom and resiliency even in times of crisis.                                
                             </p>
                         </div>
@@ -219,6 +223,24 @@
             navigationTooltips: ['Home', 'About', 'Events', 'Services', 'Testimonials', 'Awards', 'Contact'],
             showActiveTooltip: true,
         });
+
+        const toggleButton = document.getElementById('toggle-button')
+        const navUL = document.getElementById('nav-ul') 
+        const navItem  = document.getElementsByClassName('nav-item')
+
+
+
+        toggleButton.addEventListener('click', () => {
+            navUL.classList.toggle('show');
+        })
+
+        for (i = 0; i <= navItem.length; i++) {
+            navItem[i].addEventListener('click', () => {
+                navUL.classList.toggle('show');
+            })
+        }
+
+
     </script>
 </body>
 </html>
